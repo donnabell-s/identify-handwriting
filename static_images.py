@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 # Paths
 image_folder = './preprocessing/raw_data/'
-model_path = 'best.pt'
+model_path = 'final.pt'
 
 model = YOLO(model_path)
 

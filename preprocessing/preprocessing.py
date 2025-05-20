@@ -48,7 +48,7 @@ for filename in tqdm(os.listdir(input_dir)):
         dilated = cv2.dilate(binary, kernel, iterations=1)
 
         contours, _ = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
+        print(cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE))
         word_boxes = []
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)
